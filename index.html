@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<title>TrivialTrivia</title>
 </head>
 <body>
 
@@ -12,10 +13,101 @@ entire screen -->
 <!-- header div -->
 <h1 class='header'>Totally Trivial Trivia Game!</h1>
 <!-- timer div counts down from 120s-->
-
+<div class='timer'></div>
 <!-- question divs with radio buttons with multiple choice answers -->
-<!-- divs for correct answers incorrect answers unanswered questions-->
+<form id='question1'>Question 1?<br>
+  <input type='radio' name='choice1' value='A'>A
+  <input type='radio' name='choice2' value='B'>B
+  <input type='radio' name='choice3' value='C'>C
+  <input type='radio' name='choice4' value='D'>D
+  <input type='radio' name='choice5' value='E'>E  
+</form>
+
+<form id='question2'>Question 2?<br>
+  <input type='radio' name='choice1' value='A'>A
+  <input type='radio' name='choice2' value='B'>B
+  <input type='radio' name='choice3' value='C'>C
+  <input type='radio' name='choice4' value='D'>D
+  <input type='radio' name='choice5' value='E'>E   
+</form>
+
+<form id='question3'>Question 3?<br>
+  <input type='radio' name='choice1' value='A'>A
+  <input type='radio' name='choice2' value='B'>B
+  <input type='radio' name='choice3' value='C'>C
+  <input type='radio' name='choice4' value='D'>D
+  <input type='radio' name='choice5' value='E'>E  
+</form>
+
+<form id='question4'>Question 4?<br>
+  <input type='radio' name='choice1' value='A'>A
+  <input type='radio' name='choice2' value='B'>B
+  <input type='radio' name='choice3' value='C'>C
+  <input type='radio' name='choice4' value='D'>D
+  <input type='radio' name='choice5' value='E'>E  
+</form>
+
+<form id='question5'>Question 5?<br>
+  <input type='radio' name='choice1' value='A'>A
+  <input type='radio' name='choice2' value='B'>B
+  <input type='radio' name='choice3' value='C'>C
+  <input type='radio' name='choice4' value='D'>D
+  <input type='radio' name='choice5' value='E'>E 
+</form>
+
+<form id='question6'>Question 6?<br>
+  <input type='radio' name='choice1' value='A'>A
+  <input type='radio' name='choice2' value='B'>B
+  <input type='radio' name='choice3' value='C'>C
+  <input type='radio' name='choice4' value='D'>D
+  <input type='radio' name='choice5' value='E'>E 
+</form>
+
+<form id='question7'>Question 7?<br>
+  <input type='radio' name='choice1' value='A'>A
+  <input type='radio' name='choice2' value='B'>B
+  <input type='radio' name='choice3' value='C'>C
+  <input type='radio' name='choice4' value='D'>D
+  <input type='radio' name='choice5' value='E'>E   
+</form>
+
+<form id='question8'>Question 8?<br>
+  <input type='radio' name='choice1' value='A'>A
+  <input type='radio' name='choice2' value='B'>B
+  <input type='radio' name='choice3' value='C'>C
+  <input type='radio' name='choice4' value='D'>D
+  <input type='radio' name='choice5' value='E'>E  
+</form>
+
+<form id='question9'>Question 9?<br>
+  <input type='radio' name='choice1' value='A'>A
+  <input type='radio' name='choice2' value='B'>B
+  <input type='radio' name='choice3' value='C'>C
+  <input type='radio' name='choice4' value='D'>D
+  <input type='radio' name='choice5' value='E'>E 
+</form>
+
+<form id='question10'>Question 10?<br>
+  <input type='radio' name='choice1' value='A'>A
+  <input type='radio' name='choice2' value='B'>B
+  <input type='radio' name='choice3' value='C'>C
+  <input type='radio' name='choice4' value='D'>D
+  <input type='radio' name='choice5' value='E'>E 
+</form>
 <!-- message div for the game being over -->
+<div class='message'>Message</div>
+
+<!-- divs for correct answers incorrect answers unanswered questions-->
+<div class='answers correctAnswers'>Correct Answers
+	<div id='numCorrectChoice'></div>
+</div>
+<div class='answers incorrectAnswers'>
+	<div id='numIncorrectChoice'></div>
+</div>
+<div class='answers unansweredQuestions'>
+	<div id='numUnanswered'></div>
+</div>
+
 
 
 
