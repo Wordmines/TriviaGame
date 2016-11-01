@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="assets/css/style.css">
 	<title>TrivialTrivia</title>
 </head>
 <body>
@@ -10,90 +10,96 @@
 <!-- divs needed: button that acts as a screen and starts game, takes up 
 entire screen -->
 <button class='startGame'>Click Me to Play!</button>
+
+<div class='wrapperA'>
 <!-- header div -->
 <h1 class='header'>Totally Trivial Trivia Game!</h1>
 <!-- timer div counts down from 120s-->
 <div class='timer' id='timeLeft'></div>
 <!-- question divs with radio buttons with multiple choice answers -->
-<form id='question1'>Question 1?<br>
-  <input type='radio' name='question1choice' value='A'>A
-  <input type='radio' name='question1choice' value='B'>B
-  <input type='radio' name='question1choice' value='C'>C
-  <input type='radio' name='question1choice' value='D'>D
-  <input type='radio' name='question1choice' value='E'>E  
+<form id='questionOne'>Question 1?<br>
+  <input type='radio' name='q1choice' value='A'>A
+  <input type='radio' name='q1choice' value='B'>B
+  <input type='radio' name='q1choice' value='C'>C
+  <input type='radio' name='q1choice' value='D'>D
+  <input type='radio' name='q1choice' value='E'>E  
 </form>
 
-<form id='question2'>Question 2?<br>
-  <input type='radio' name='question2choice' value='A'>A
-  <input type='radio' name='question2choice' value='B'>B
-  <input type='radio' name='question2choice' value='C'>C
-  <input type='radio' name='question2choice' value='D'>D
-  <input type='radio' name='question2choice' value='E'>E   
+<form id='questionTwo'>Question 2?<br>
+  <input type='radio' name='q2choice' value='A'>A
+  <input type='radio' name='q2choice' value='B'>B
+  <input type='radio' name='q2choice' value='C'>C
+  <input type='radio' name='q2choice' value='D'>D
+  <input type='radio' name='q2choice' value='E'>E   
 </form>
 
-<form id='question3'>Question 3?<br>
-  <input type='radio' name='question3choice' value='A'>A
-  <input type='radio' name='question3choice' value='B'>B
-  <input type='radio' name='question3choice' value='C'>C
-  <input type='radio' name='question3choice' value='D'>D
-  <input type='radio' name='question3choice' value='E'>E  
+<form id='questionThree'>Question 3?<br>
+  <input type='radio' name='q3choice' value='A'>A
+  <input type='radio' name='q3choice' value='B'>B
+  <input type='radio' name='q3choice' value='C'>C
+  <input type='radio' name='q3choice' value='D'>D
+  <input type='radio' name='q3choice' value='E'>E  
 </form>
 
-<form id='question4'>Question 4?<br>
-  <input type='radio' name='question4choice' value='A'>A
-  <input type='radio' name='question4choice' value='B'>B
-  <input type='radio' name='question4choice' value='C'>C
-  <input type='radio' name='question4choice' value='D'>D
-  <input type='radio' name='question4choice' value='E'>E  
+<form id='questionFour'>Question 4?<br>
+  <input type='radio' name='q4choice' value='A'>A
+  <input type='radio' name='q4choice' value='B'>B
+  <input type='radio' name='q4choice' value='C'>C
+  <input type='radio' name='q4choice' value='D'>D
+  <input type='radio' name='q4choice' value='E'>E  
 </form>
 
-<form id='question5'>Question 5?<br>
-  <input type='radio' name='question5choice' value='A'>A
-  <input type='radio' name='question5choice' value='B'>B
-  <input type='radio' name='question5choice' value='C'>C
-  <input type='radio' name='question5choice' value='D'>D
-  <input type='radio' name='question5choice' value='E'>E 
+<form id='questionFive'>Question 5?<br>
+  <input type='radio' name='q5choice' value='A'>A
+  <input type='radio' name='q5choice' value='B'>B
+  <input type='radio' name='q5choice' value='C'>C
+  <input type='radio' name='q5choice' value='D'>D
+  <input type='radio' name='q5choice' value='E'>E 
 </form>
 
-<form id='question6'>Question 6?<br>
-  <input type='radio' name='question6choice' value='A'>A
-  <input type='radio' name='question6choice' value='B'>B
-  <input type='radio' name='question6choice' value='C'>C
-  <input type='radio' name='question6choice' value='D'>D
-  <input type='radio' name='question6choice' value='E'>E 
+<form id='questionSix'>Question 6?<br>
+  <input type='radio' name='q6choice' value='A'>A
+  <input type='radio' name='q6choice' value='B'>B
+  <input type='radio' name='q6choice' value='C'>C
+  <input type='radio' name='q6choice' value='D'>D
+  <input type='radio' name='q6choice' value='E'>E 
 </form>
 
-<form id='question7'>Question 7?<br>
-  <input type='radio' name='question7choice' value='A'>A
-  <input type='radio' name='question7choice' value='B'>B
-  <input type='radio' name='question7choice' value='C'>C
-  <input type='radio' name='question7choice' value='D'>D
-  <input type='radio' name='question7choice' value='E'>E   
+<form id='questionSeven'>Question 7?<br>
+  <input type='radio' name='q7choice' value='A'>A
+  <input type='radio' name='q7choice' value='B'>B
+  <input type='radio' name='q7choice' value='C'>C
+  <input type='radio' name='q7choice' value='D'>D
+  <input type='radio' name='q7choice' value='E'>E   
 </form>
 
-<form id='question8'>Question 8?<br>
-  <input type='radio' name='question8choice' value='A'>A
-  <input type='radio' name='question8choice' value='B'>B
-  <input type='radio' name='question8choice' value='C'>C
-  <input type='radio' name='question8choice' value='D'>D
-  <input type='radio' name='question8choice' value='E'>E  
+<form id='questionEight'>Question 8?<br>
+  <input type='radio' name='q8choice' value='A'>A
+  <input type='radio' name='q8choice' value='B'>B
+  <input type='radio' name='q8choice' value='C'>C
+  <input type='radio' name='q8choice' value='D'>D
+  <input type='radio' name='q8choice' value='E'>E  
 </form>
 
-<form id='question9'>Question 9?<br>
-  <input type='radio' name='question9choice' value='A'>A
-  <input type='radio' name='question9choice' value='B'>B
-  <input type='radio' name='question9choice' value='C'>C
-  <input type='radio' name='question9choice' value='D'>D
-  <input type='radio' name='question9choice' value='E'>E 
+<form id='questionNine'>Question 9?<br>
+  <input type='radio' name='q9choice' value='A'>A
+  <input type='radio' name='q9choice' value='B'>B
+  <input type='radio' name='q9choice' value='C'>C
+  <input type='radio' name='q9choice' value='D'>D
+  <input type='radio' name='q9choice' value='E'>E 
 </form>
 
-<form id='question10'>Question 10?<br>
-  <input type='radio' name='question10choice' value='A'>A
-  <input type='radio' name='question10choice' value='B'>B
-  <input type='radio' name='question10choice' value='C'>C
-  <input type='radio' name='question10choice' value='D'>D
-  <input type='radio' name='question10choice' value='E'>E 
+<form id='questionTen'>Question 10?<br>
+  <input type='radio' name='q10choice' value='A'>A
+  <input type='radio' name='q10choice' value='B'>B
+  <input type='radio' name='q10choice' value='C'>C
+  <input type='radio' name='q10choice' value='D'>D
+  <input type='radio' name='q10choice' value='E'>E 
 </form>
+
+</div>
+
+<div class='wrapperB'>
 <!-- message div for the game being over -->
 <div class='message'>Message</div>
 
@@ -107,7 +113,7 @@ entire screen -->
 <div class='answers unansweredQuestions'>Unanswered Questions
 	<div id='numUnanswered'></div>
 </div>
-
+</div>
 
 
 
