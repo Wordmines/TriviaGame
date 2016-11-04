@@ -11,111 +11,25 @@
 entire screen -->
 <button class='startGame'>Click Me to Play!</button>
 
-<div class='wrapperA'>
+<div class='wrapper'>
 <!-- header div -->
-<h1 class='header'>Totally Trivial Trivia Game!</h1>
-<!-- timer div counts down from 120s-->
-<div class='timer' id='timeLeft'></div>
-<!-- question divs with radio buttons with multiple choice answers -->
-<form id='questionOne'>Question 1?<br>
-  <input type='radio' name='q1choice' value='A'>A
-  <input type='radio' name='q1choice' value='B'>B
-  <input type='radio' name='q1choice' value='C'>C
-  <input type='radio' name='q1choice' value='D'>D
-  <input type='radio' name='q1choice' value='E'>E  
-</form>
+	<h1 class='header'>Totally Trivial Trivia Game!</h1>
+	<!-- timer div counts down from 120s-->
+	<div class='timer' id='timeLeft'></div>
 
-<form id='questionTwo'>Question 2?<br>
-  <input type='radio' name='q2choice' value='A'>A
-  <input type='radio' name='q2choice' value='B'>B
-  <input type='radio' name='q2choice' value='C'>C
-  <input type='radio' name='q2choice' value='D'>D
-  <input type='radio' name='q2choice' value='E'>E   
-</form>
-
-<form id='questionThree'>Question 3?<br>
-  <input type='radio' name='q3choice' value='A'>A
-  <input type='radio' name='q3choice' value='B'>B
-  <input type='radio' name='q3choice' value='C'>C
-  <input type='radio' name='q3choice' value='D'>D
-  <input type='radio' name='q3choice' value='E'>E  
-</form>
-
-<form id='questionFour'>Question 4?<br>
-  <input type='radio' name='q4choice' value='A'>A
-  <input type='radio' name='q4choice' value='B'>B
-  <input type='radio' name='q4choice' value='C'>C
-  <input type='radio' name='q4choice' value='D'>D
-  <input type='radio' name='q4choice' value='E'>E  
-</form>
-
-<form id='questionFive'>Question 5?<br>
-  <input type='radio' name='q5choice' value='A'>A
-  <input type='radio' name='q5choice' value='B'>B
-  <input type='radio' name='q5choice' value='C'>C
-  <input type='radio' name='q5choice' value='D'>D
-  <input type='radio' name='q5choice' value='E'>E 
-</form>
-
-<form id='questionSix'>Question 6?<br>
-  <input type='radio' name='q6choice' value='A'>A
-  <input type='radio' name='q6choice' value='B'>B
-  <input type='radio' name='q6choice' value='C'>C
-  <input type='radio' name='q6choice' value='D'>D
-  <input type='radio' name='q6choice' value='E'>E 
-</form>
-
-<form id='questionSeven'>Question 7?<br>
-  <input type='radio' name='q7choice' value='A'>A
-  <input type='radio' name='q7choice' value='B'>B
-  <input type='radio' name='q7choice' value='C'>C
-  <input type='radio' name='q7choice' value='D'>D
-  <input type='radio' name='q7choice' value='E'>E   
-</form>
-
-<form id='questionEight'>Question 8?<br>
-  <input type='radio' name='q8choice' value='A'>A
-  <input type='radio' name='q8choice' value='B'>B
-  <input type='radio' name='q8choice' value='C'>C
-  <input type='radio' name='q8choice' value='D'>D
-  <input type='radio' name='q8choice' value='E'>E  
-</form>
-
-<form id='questionNine'>Question 9?<br>
-  <input type='radio' name='q9choice' value='A'>A
-  <input type='radio' name='q9choice' value='B'>B
-  <input type='radio' name='q9choice' value='C'>C
-  <input type='radio' name='q9choice' value='D'>D
-  <input type='radio' name='q9choice' value='E'>E 
-</form>
-
-<form id='questionTen'>Question 10?<br>
-  <input type='radio' name='q10choice' value='A'>A
-  <input type='radio' name='q10choice' value='B'>B
-  <input type='radio' name='q10choice' value='C'>C
-  <input type='radio' name='q10choice' value='D'>D
-  <input type='radio' name='q10choice' value='E'>E 
-</form>
+	<div class='form' id='questions-container'></div>
 
 </div>
 
 <button id='doneButton'>Done</button>
 
-<div class='wrapperB'>
 <!-- message div for the game being over -->
 <div class='message'>Message</div>
 
-<!-- divs for correct answers incorrect answers unanswered questions-->
-<div class='answers correctAnswers'>Correct Answers
-	<div id='numCorrectChoice'></div>
-</div>
-<div class='answers incorrectAnswers'>Incorrect Answers
-	<div id='numIncorrectChoice'></div>
-</div>
-<div class='answers unansweredQuestions'>Unanswered Questions
-	<div id='numUnanswered'></div>
-</div>
-</div>
+<div class='results'></div>
+
+
+<!-- </div> -->
 
 
 
