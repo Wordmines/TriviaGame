@@ -4,7 +4,7 @@ $( document ).ready(function() {
 	var game = {
 		questions: [
 		{
-	   		question: 'What is the capital of Vermont?', 
+	   		question: 'What is the capital of Vermont?',
 	   		possibles: ['Battleboro', 'Montpelier', 'Barre City', 'Burlington'],
 	   		id: 'question-one',
 	   		answer: 1
@@ -61,13 +61,18 @@ $( document ).ready(function() {
 			answer: 3
 		}, {
 			question: 'What is the best kind of coffee?',
-			possibles: ['Intelligentsia', 'Blue Bottle', 'starbucks', 'Caribou', 'none of the above'],
+			possibles: ['Intelligentsia', 'Blue Bottle', 'Starbucks', 'Caribou', 'none of the above'],
 			id: 'question-twelve',
 			answer: 4
 		}
 		]}
 
-	
+	// test
+	var message = 'Game Over!';
+	// var $message = $('#message');
+	// test
+
+// ORIGINAL
 // need to click a button to start the game and the timer- onclick event
     $(".startGame").on("click", function (){
 // when the start button clicked, the div with the questions that was hidden is shown
@@ -75,39 +80,50 @@ $( document ).ready(function() {
 		console.log('hello');
 
 		$(this).hide();
-});
-// when one of the radio buttons is clicked, store the value of that button and update either the 
-// numCorrectChoice, numIncorrectChoice, or numUnanswered accordingly
-	$('#questionOne input').on('change', function() {
-        console.log($('input[name="q1choice"]:checked', '#questionOne').val());
-    });
-    $('#questionTwo input').on('change', function() {
-        console.log($('input[name="q2choice"]:checked', '#questionTwo').val());
-    });
-    $('#questionThree input').on('change', function() {
-        console.log($('input[name="q3choice"]:checked', '#questionThree').val());
-    });
-    $('#questionFour input').on('change', function() {
-        console.log($('input[name="q4choice"]:checked', '#questionFour').val());
-    });
-    $('#questionFive input').on('change', function() {
-        console.log($('input[name="q5choice"]:checked', '#questionFive').val());
-    });
-    $('#questionSix input').on('change', function() {
-        console.log($('input[name="q6choice"]:checked', '#questionSix').val());
-    });
-    $('#questionSeven input').on('change', function() {
-        console.log($('input[name="q7choice"]:checked', '#questionSeven').val());
-    }); 
-    $('#questionEight input').on('change', function() {
-        console.log($('input[name="q8choice"]:checked', '#questionEight').val());
-    });
-    $('#questionNine input').on('change', function() {
-        console.log($('input[name="q9choice"]:checked', '#questionNine').val());
-    });
-    $('#questionTen input').on('change', function() {
-        console.log($('input[name="q10choice"]:checked', '#questionTen').val());
-    });
+	});
+
+    // These events start the timer. 
+    var number = 30;
+    $('#timeLeft').on('click', run);
+
+	// The decrement function.
+    function decrement(){
+        // Decrease number by one.
+        number--;
+        // Show the number in the #timeLeft div.
+        $('#timeLeft').html('<h2>' + number + " seconds"+'</h2>');
+        // Once number hits zero...
+        if (number === 0){
+        // ...run the stop function.
+        stop();
+        // Alert the user that time is up. Update the innerHTML of the message
+       // div to say 'Game Over!'
+        // alert('Time Up!')
+        $('#message').html('time up!');
+        checkAnswers();
+        }
+    }
+    // test
+    // writes the win or lose message 
+		// function writeMessage (){
+		// 	// updates the contents of the message div
+		// 	$message.html(message);
+		// }
+	// test
+
+    function run(){
+        counter = setInterval(decrement, 1000);
+    }
+    
+    // The stop function
+    function stop(){
+    // Clears our "counter" interval. The interval name is passed to the clearInterval function.
+        clearInterval(counter);
+    }
+
+    // Execute the run function.
+    run();
+
 
 function formTemplate(data) {
 	var qString = "<form id='questionOne'>"+ data.question +"<br>";
@@ -115,10 +131,10 @@ function formTemplate(data) {
 	for (var i = 0; i < possibles.length; i++) {
 		var possible = possibles[i];
 		console.log(possible);
-		qString = qString + "<input type='radio' name='"+data.id+"' value='A'/>"+possible;
-	
+		qString = qString + "<input type='radio' name='"+data.id+"' value="+ i +">"+possible;
+
 	}
-	return qString + "</form>";	
+	return qString + "</form>";
 }
 window.formTemplate = formTemplate;
 
@@ -156,12 +172,10 @@ function checkAnswers (){
 
 
 	for (var i = 0; i<game.questions.length; i++) {
-		// resultsHTML = resultsHTML + resultsTemplate(game.questions[i]);
 		if (isCorrect(game.questions[i])) {
 			correct++;
 		} else {
-			incorrect++;
-			if (checkAnswered(question)) {
+			if (checkAnswered(game.questions[i])) {
 				incorrect++;
 			} else {
 				unAnswered++;
@@ -173,25 +187,23 @@ function checkAnswers (){
 }
 
 function checkAnswered(question){
-	for (var i=0; i<game.questions.length; i++) {
-		if (checkAnswers<isCorrect;
-		unAnswered++;
+	var anyAnswered = false;
+	var answers = $('[name='+question.id+']');
+
+	for (var i = 0; i < answers.length; i++) {
+		if (answers[i].checked) {
+			anyAnswered = true;
+		}
 	}
-	// query for all inputs for this question
-	// if any are checked, return true
-	// if none are checked return false
+	return anyAnswered;
+
 }
 
-checkAnswers();
-// select the done button 
-$('#doneButton').on("click", checkAnswers);
-// and click callback on the done button
-
-// simpleTimerSolution
-
-
-
-
-
+// create a function with an onclick event for the doneButton that both checks the Answers 
+// and stops the clock when "done" is pressed
+	$('#doneButton').on('click', function() {
+	checkAnswers();
+	stop();
+	})
 
 });
