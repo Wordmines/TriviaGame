@@ -233,6 +233,6 @@ function checkAnswered(question){
 	$('#doneButton').on('click', function() {
 	checkAnswers();
 	stop();
+	$("#messageDiv").html("Game Over!");
 	})
-
 });
